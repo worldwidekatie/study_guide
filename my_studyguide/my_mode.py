@@ -1,4 +1,7 @@
-class Game:
+
+
+
+class Games():
     """
     A general representation of an 
     abstract game
@@ -36,11 +39,25 @@ class TicTacToe(Games):
     This is a child class from the games class
     """
 
-    def __init__(self, rounds=5, player1='Will', player2='Mac'):
+    def __init__(self, player1='Will', player2='Mac'):
 
-        super().__init__(rounds, player1, player2)
+        super().__init__(player1, player2)
         self.x = self.player1
         self.o = self.player2
 
     def x_and_o(self):
         print(self.x, "is team X and", self.o, "is team O")
+
+
+if __name__ == "__main__":
+    pass
+
+"""
+I'm instantiating an insteance of Games()
+"""
+game = Games()
+print(game.rounds)
+
+
+ttt = TicTacToe()
+print(ttt.x_and_o)
