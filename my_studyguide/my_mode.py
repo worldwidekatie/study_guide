@@ -36,9 +36,11 @@ class TicTacToe(Games):
     This is a child class from the games class
     """
 
-    def __init__(self, player1='Alice', player2='Bob'):
-        x = self.player1
-        o = self.player2
+    def __init__(self, rounds=5, player1='Will', player2='Mac'):
+
+        super().__init__(rounds, player1, player2)
+        self.x = self.player1
+        self.o = self.player2
 
     def x_and_o(self):
         print(self.x, "is team X and", self.o, "is team O")
